@@ -1,0 +1,20 @@
+{
+  "name": "QGSocketIO",
+  "version": "0.1.1",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "license": "MIT",
+  "summary": "SocketIO client with object-c",
+  "homepage": "https://github.com/QuanGe/QGSocketIO-objc",
+  "authors": {
+    "QuanGe": "zhang_ru_quan@163.com"
+  },
+  "source": {
+    "git": "https://github.com/QuanGe/QGSocketIO-objc.git",
+    "tag": "0.1.1"
+  },
+  "description": "SocketIO client with object-c",
+  "source_files": "QGSocketIO/*.{h,m}",
+  "requires_arc": true
+}

@@ -1,0 +1,1 @@
+../../../../../../QGSocketIO/QGSocketIOClient.h

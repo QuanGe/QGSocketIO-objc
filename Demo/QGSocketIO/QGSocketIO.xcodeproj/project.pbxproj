@@ -15,6 +15,7 @@
 		98F921AC1F59B96200526B62 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F921AB1F59B96200526B62 /* main.m */; };
 		98F921B61F59B96200526B62 /* QGSocketIOTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F921B51F59B96200526B62 /* QGSocketIOTests.m */; };
 		98F921C11F59B96200526B62 /* QGSocketIOUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F921C01F59B96200526B62 /* QGSocketIOUITests.m */; };
+		ECFE4261177605B8A49FEC8E /* libPods-QGSocketIO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A416AE35B48AB61269CB42ED /* libPods-QGSocketIO.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		98F921BC1F59B96200526B62 /* QGSocketIOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QGSocketIOUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F921C01F59B96200526B62 /* QGSocketIOUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QGSocketIOUITests.m; sourceTree = "<group>"; };
 		98F921C21F59B96200526B62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A41BD5A3A9F969F1BDC4B68 /* Pods-QGSocketIO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGSocketIO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QGSocketIO/Pods-QGSocketIO.debug.xcconfig"; sourceTree = "<group>"; };
+		A416AE35B48AB61269CB42ED /* libPods-QGSocketIO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QGSocketIO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF1B42D416498E269CD384C /* Pods-QGSocketIO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QGSocketIO.release.xcconfig"; path = "Pods/Target Support Files/Pods-QGSocketIO/Pods-QGSocketIO.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECFE4261177605B8A49FEC8E /* libPods-QGSocketIO.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20C4D9BDAFD1747F189BBD7B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A41BD5A3A9F969F1BDC4B68 /* Pods-QGSocketIO.debug.xcconfig */,
+				AEF1B42D416498E269CD384C /* Pods-QGSocketIO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		98F921901F59B96200526B62 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +99,8 @@
 				98F921B41F59B96200526B62 /* QGSocketIOTests */,
 				98F921BF1F59B96200526B62 /* QGSocketIOUITests */,
 				98F9219A1F59B96200526B62 /* Products */,
+				20C4D9BDAFD1747F189BBD7B /* Pods */,
+				D90845C6EC0AA48586F2E707 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +148,14 @@
 			path = QGSocketIOUITests;
 			sourceTree = "<group>";
 		};
+		D90845C6EC0AA48586F2E707 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A416AE35B48AB61269CB42ED /* libPods-QGSocketIO.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -139,9 +163,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98F921C51F59B96200526B62 /* Build configuration list for PBXNativeTarget "QGSocketIO" */;
 			buildPhases = (
+				84231B4F9876E0C4266CEDE5 /* [CP] Check Pods Manifest.lock */,
 				98F921951F59B96200526B62 /* Sources */,
 				98F921961F59B96200526B62 /* Frameworks */,
 				98F921971F59B96200526B62 /* Resources */,
+				DFEAB99F3F68D4187C8E95F6 /* [CP] Embed Pods Frameworks */,
+				582D92AC7AAB5A574E74BAD6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		582D92AC7AAB5A574E74BAD6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QGSocketIO/Pods-QGSocketIO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84231B4F9876E0C4266CEDE5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QGSocketIO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFEAB99F3F68D4187C8E95F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QGSocketIO/Pods-QGSocketIO-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98F921951F59B96200526B62 /* Sources */ = {
@@ -425,6 +503,7 @@
 		};
 		98F921C61F59B96200526B62 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A41BD5A3A9F969F1BDC4B68 /* Pods-QGSocketIO.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QGSocketIO/Info.plist;
@@ -437,6 +516,7 @@
 		};
 		98F921C71F59B96200526B62 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEF1B42D416498E269CD384C /* Pods-QGSocketIO.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = QGSocketIO/Info.plist;
